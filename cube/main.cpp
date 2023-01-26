@@ -54,13 +54,13 @@ void draw_line(Screen &screen, float x1, float y1, float x2, float y2, float xOf
     }
 }
 
-void draw_shape(shape &currentShape, vec3 &c, Screen &screen, float xOffset = 0, float yOffset =0) {
+void draw_shape(shape &currentShape, vec3 &c, Screen &screen, float xOffset = 0, float yOffset =0, vec3 rotationOffset = {0,0,0}) {
     for (vec3 &p : currentShape.points)
     {
         p.x -= c.x;
         p.y -= c.y;
         p.z -= c.z;
-        rotate(p, 0.02, 0.01, 0.04);
+        rotate(p, 0.02+rotationOffset.x, 0.01+rotationOffset.y, 0.04+rotationOffset.y);
         p.x += c.x;
         p.y += c.y;
         p.z += c.z;
@@ -73,13 +73,7 @@ void draw_shape(shape &currentShape, vec3 &c, Screen &screen, float xOffset = 0,
     }
 }
 
-int main()
-{
-    Screen screen;
-    srand(time(NULL));
-    shape currentShape = icosahedron;
-
-    // calculate centeroid
+vec3 calc_centeroid(shape currentShape) {
     vec3 c{0, 0, 0};
     for (auto &p : currentShape.points)
     {
@@ -91,23 +85,24 @@ int main()
     c.x /= currentShape.points.size();
     c.y /= currentShape.points.size();
     c.z /= currentShape.points.size();
-    shape py = {pyramid,pyramidConnections};
-    vec3 b{0, 0, 0};
-    for (auto &p : py.points)
-    {
-        b.x += p.x;
-        b.y += p.y;
-        b.z += p.z;
-    }
+    return c;
+}
 
-    b.x /= py.points.size();
-    b.y /= py.points.size();
-    b.z /= py.points.size();
+int main()
+{
+    Screen screen;
+    srand(time(NULL));
+    shape currentShape = icosahedron;
+
+    // calculate centeroid
+    
+    vec3 c = calc_centeroid(currentShape);
+    vec3 b = calc_centeroid(pyramid);
 
     while (true)
     {
         draw_shape(currentShape, c, screen, -100, -100);
-        draw_shape(py,b,screen, 100, 100);
+        draw_shape(pyramid,b,screen, 100, 100,vec3{0.02,0.05,0.09});
         screen.show();
         screen.clear();
 

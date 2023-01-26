@@ -19,12 +19,24 @@ struct shape
     std::vector<connection> connections;
 };
 
-std::vector<vec3> pyramid{
+shape pyramid{
+    {    
         {200, 200, 200},
         {300, 200, 200},
         {300, 200, 300},
         {200, 200, 300},
-        {250, 100, 250},
+        {250, 100, 250}, 
+    },
+    {
+        {0, 1},
+        {0, 4},
+        {1, 2},
+        {1, 4},
+        {2, 3},
+        {2, 4},
+        {3, 0},
+        {3, 4},
+    }
 
 };
 shape icosahedron = {
@@ -53,19 +65,4 @@ shape icosahedron = {
         {6, 1}, {1, 10}, {9, 0}, {9, 11}, {0, 11}, {9, 2}, 
         {11, 2}, {2, 5}, {7, 2}, {2, 11}
     }
-};
-
-std::vector<connection> pyramidConnections{
-    {0, 1},
-    {0, 4},
-    {1, 2},
-    {1, 4},
-    {2, 3},
-    {2, 4},
-    {3, 0},
-    {3, 4},
-};
-
-std::vector<connection> icosahedronConnections{
-    
 };
