@@ -1,4 +1,4 @@
-#include <SDL2/SDL.h>
+#include <SDL.h>
 #include <vector>
 
 class Screen {
@@ -10,7 +10,7 @@ class Screen {
 public:
 	Screen() {
 		SDL_Init(SDL_INIT_VIDEO);
-        window = SDL_CreateWindow("Shapes",0,0,640 * 1.5, 480 * 1.5,0);
+        window = SDL_CreateWindow("Shapes",100,100,640 * 1.5, 480 * 1.5,0);
 		renderer = SDL_CreateRenderer(window,-1,0);
 		SDL_RenderSetScale(renderer, 1.5, 1.5);
 	}

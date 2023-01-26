@@ -1,11 +1,10 @@
 ﻿  main.cpp
-C:\Users\benho\Desktop\Files\cpp\cube\cube\Screen.h(13,46): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\benho\Desktop\Files\cpp\cube\cube\Screen.h(13,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\benho\Desktop\Files\cpp\cube\cube\main.cpp(47,32): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\benho\Desktop\Files\cpp\cube\cube\main.cpp(48,32): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\benho\Desktop\Files\cpp\cube\cube\main.cpp(49,32): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\benho\Desktop\Files\cpp\cube\cube\main.cpp(68,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\benho\Desktop\Files\cpp\cube\cube\main.cpp(83,2): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\benho\Desktop\Files\cpp\cube\cube\main.cpp(83,2): warning C4305: 'initializing': truncation from 'const double' to 'float'
-C:\Users\benho\Desktop\Files\cpp\cube\cube\main.cpp(162,30): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\benho\Desktop\Files\cpp\cube\cube\Screen.h(13,67): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\benho\Desktop\Files\cpp\cube\cube\Screen.h(13,56): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\benho\Desktop\Files\cpp\cube\cube\shapes.hpp(56,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\benho\Desktop\Files\cpp\cube\cube\main.cpp(36,35): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\benho\Desktop\Files\cpp\cube\cube\main.cpp(37,35): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\benho\Desktop\Files\cpp\cube\cube\main.cpp(38,35): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\benho\Desktop\Files\cpp\cube\cube\main.cpp(63,35): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\benho\Desktop\Files\cpp\cube\cube\main.cpp(79,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   cube.vcxproj -> C:\Users\benho\Desktop\Files\cpp\cube\x64\Debug\cube.exe
