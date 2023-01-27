@@ -92,7 +92,7 @@ int main()
 {
     Screen screen;
     srand(time(NULL));
-    shape currentShape = icosahedron;
+    shape currentShape = torus;
 
     // calculate centeroid
     
@@ -101,7 +101,7 @@ int main()
 
     while (true)
     {
-        draw_shape(currentShape, c, screen, -100, -100);
+        draw_shape(currentShape, c, screen,55,55,vec3{0.0415,0.0415,0.0415});
         draw_shape(pyramid,b,screen, 100, 100,vec3{0.02,0.05,0.09});
         screen.show();
         screen.clear();
